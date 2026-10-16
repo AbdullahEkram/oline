@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>مكتب ITI Online - منظومة الخدمات وإدارة الموظفين</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+                    colors: {
+                        itiDark: '#0f172a',
+                        itiGold: '#d97706',
+                        itiGreen: '#059669'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; }
+    </style>
+</head>
+<body class="font-cairo text-slate-800 min-h-screen flex flex-col justify-between select-none">
+
+    <!-- Header -->
+    <header class="bg-itiDark text-white shadow-lg border-b-4 border-itiGold sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3 space-x-reverse w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-2">
+                    <div class="bg-itiGold text-itiDark font-black p-2 rounded-xl text-lg shadow">ITI</div>
+                    <div>
+                        <h1 class="text-base font-black text-white leading-tight">مكتب ITI Online للخدمات</h1>
+                        <p class="text-[10px] text-slate-300">إدارة م/ عبدالله التركي (ملوي)</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex w-full sm:w-auto justify-center gap-1.5 text-xs font-bold overflow-x-auto pb-1 sm:pb-0">
+                <button onclick="switchTab('servicesTab')" id="btnServ" class="bg-itiGold text-itiDark px-3 py-1.5 rounded-xl transition shadow whitespace-nowrap">خدمات المكتب</button>
+                <button onclick="switchTab('employeeTab')" id="btnEmp" class="bg-slate-800 text-slate-200 px-3 py-1.5 rounded-xl transition whitespace-nowrap">بوابة رضوى مصطفى</button>
+                <button onclick="switchTab('rulesTab')" id="btnRules" class="bg-slate-800 text-slate-200 px-3 py-1.5 rounded-xl transition whitespace-nowrap">التارجت والقواعد</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-6 flex-grow w-full">
+
+        <!-- Services Tab -->
+        <section id="servicesTab" class="space-y-6">
+            <div class="bg-gradient-to-r from-itiDark via-slate-800 to-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl">
+                <span class="bg-itiGold text-itiDark text-[10px] sm:text-xs font-black px-3 py-1 rounded-full">المنظومة الخدمية الرقمية</span>
+                <h2 class="text-xl sm:text-3xl font-black mt-2 mb-2">دليل خدمات مكتب ITI Online</h2>
+                <p class="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">دليل الخدمات المتاحة للعملاء لتسويقها وتنفيذها بدقة عالية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="w-10 h-10 bg-amber-50 text-itiGold rounded-xl flex items-center justify-center text-lg font-bold">🏆</div>
+                    <h3 class="font-black text-sm text-itiDark">1. تكريمات وشهادات</h3>
+                    <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                        <li>تكريم متوفي</li>
+                        <li>حضانات ومسابقات</li>
+                        <li>هدايا وتنظيم</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-lg font-bold">🏛️</div>
+                    <h3 class="font-black text-sm text-itiDark">2. خدمات حكومية</h3>
+                    <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                        <li>تموين (ضم أفراد وتفعيل)</li>
+                        <li>أحوال مدنية</li>
+                        <li>شهر عقاري</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="w-10 h-10 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center text-lg font-bold">💍</div>
+                    <h3 class="font-black text-sm text-itiDark">3. تجهيز عروسة وعناية</h3>
+                    <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                        <li>ميكب</li>
+                        <li>برفانات</li>
+                        <li>مستلزمات عناية</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="w-10 h-10 bg-emerald-50 text-itiGreen rounded-xl flex items-center justify-center text-lg font-bold">💻</div>
+                    <h3 class="font-black text-sm text-itiDark">4. خدمات رقمية</h3>
+                    <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                        <li>فوتوشوب وإعلانات فيسبوك</li>
+                        <li>حلول كمبيوتر ولابتوب أونلاين</li>
+                        <li>شحن نت أرضي</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employee Portal Tab -->
+        <section id="employeeTab" class="space-y-6 hidden">
+            <div class="bg-white p-5 sm:p-8 rounded-3xl border border-slate-200 shadow-sm max-w-2xl mx-auto">
+                <div class="border-b pb-4 mb-5 flex justify-between items-center flex-wrap gap-2">
+                    <div>
+                        <h2 class="text-lg font-black text-itiDark">📊 تسجيل الأداء اليومي والتقرير</h2>
+                        <p class="text-xs text-slate-500 mt-0.5">الموظفة: <strong class="text-itiGold">رضوى مصطفى</strong></p>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-800 text-[10px] px-2.5 py-1 rounded-full font-bold">ربط أونلاين مباشر</span>
+                </div>
+
+                <form id="employeeForm" onsubmit="submitEmployeeReport(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">حالة الدخول للشغل اليوم:</label>
+                        <select id="attendedWork" onchange="toggleAttendance()" class="w-full px-3 py-2.5 rounded-xl border text-xs font-bold focus:ring-2 focus:ring-itiGold focus:outline-none bg-slate-50">
+                            <option value="نعم">نعم، دخلت الشغل اليوم</option>
+                            <option value="لا">لا، لم تدخل الشغل اليوم (تطبيق الخصم والغابات)</option>
+                        </select>
+                    </div>
+
+                    <div id="workFields" class="space-y-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">رسائل واتساب اليومية:</label>
+                                <input type="number" id="whatsappMsgs" min="0" value="0" oninput="calculateSalary()" class="w-full px-3 py-2 rounded-xl border text-xs font-mono focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">جروبات فيسبوك وواتساب:</label>
+                                <input type="number" id="groupsCount" min="0" value="0" class="w-full px-3 py-2 rounded-xl border text-xs font-mono focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">العملاء الجدد (هذا الشهر):</label>
+                                <input type="number" id="newClients" min="0" value="0" oninput="calculateSalary()" class="w-full px-3 py-2 rounded-xl border text-xs font-mono focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">إجمالي المبيعات (جنيه):</label>
+                                <input type="number" id="totalSales" min="0" value="0" oninput="calculateSalary()" class="w-full px-3 py-2 rounded-xl border text-xs font-mono focus:outline-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">ملاحظات اليوم / سبب الغياب:</label>
+                        <textarea id="dailyNotes" rows="2" placeholder="اكتب ملاحظاتك..." class="w-full px-3 py-2 rounded-xl border text-xs focus:outline-none resize-none bg-slate-50"></textarea>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2">
+                        <h4 class="font-bold text-xs text-slate-700">حاسبة الاستحقاق اللحظية:</h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+                            <div class="bg-white p-2 rounded-xl border shadow-sm">
+                                <span class="text-[9px] text-slate-400 block">الأساسي</span>
+                                <strong id="calcBase" class="text-xs font-black text-slate-800">3000 ج.م</strong>
+                            </div>
+                            <div class="bg-rose-50 p-2 rounded-xl border border-rose-200 shadow-sm">
+                                <span class="text-[9px] text-rose-600 block">الخصم</span>
+                                <strong id="calcDeduction" class="text-xs font-black text-rose-600">0 ج.م</strong>
+                            </div>
+                            <div class="bg-white p-2 rounded-xl border shadow-sm">
+                                <span class="text-[9px] text-slate-400 block">البونص</span>
+                                <strong id="calcBonus" class="text-xs font-black text-itiGold">0 ج.م</strong>
+                            </div>
+                            <div class="bg-emerald-50 p-2 rounded-xl border border-emerald-200 shadow-sm">
+                                <span class="text-[9px] text-emerald-600 block font-bold">الصافي</span>
+                                <strong id="calcFinal" class="text-xs font-black text-emerald-700">3000 ج.م</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="w-full bg-itiDark hover:bg-slate-900 text-white font-bold py-3 rounded-xl transition shadow text-xs active:scale-[0.99]">
+                        إرسال التقرير اليومي وتحديث الإكسيل
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Rules Tab -->
+        <section id="rulesTab" class="space-y-6 hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+                    <h3 class="font-black text-sm text-itiDark flex items-center gap-2">
+                        <i class="fa-solid fa-medal text-itiGold"></i> نظام التارجت والبونص
+                    </h3>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-3 bg-slate-50 rounded-xl border">
+                            <strong class="text-itiDark block mb-1">الأساسي (3000 جنيه):</strong>
+                            <p class="text-slate-500">يومياً: 50 رسالة واتساب / 10 جروبات. أسبوعياً: 3 عملاء. شهرياً: 10 عملاء فعليين. (إن لم يتحقق يؤخذ 2000 ج.م).</p>
+                        </div>
+                        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200">
+                            <strong class="text-amber-800 block mb-1">المستوى 1 (+500 = 3500 ج.م):</strong>
+                            <p class="text-slate-600">80 رسالة | 20 عميل | مبيعات فوق 6,000 ج.م</p>
+                        </div>
+                        <div class="p-3 bg-blue-50 rounded-xl border border-blue-200">
+                            <strong class="text-blue-800 block mb-1">المستوى 2 (+1000 = 4000 ج.م):</strong>
+                            <p class="text-slate-600">100 رسالة | 30 عميل | مبيعات فوق 10,000 ج.م</p>
+                        </div>
+                        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200">
+                            <strong class="text-emerald-800 block mb-1">المستوى 3 الوحش (+2000 = 5000 ج.م):</strong>
+                            <p class="text-slate-600">150 رسالة | 50 عميل | مبيعات فوق 15,000 ج.م + 10% عمولة على الزيادة.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm space-y-2">
+                        <h3 class="font-black text-sm text-itiDark flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-itiGreen"></i> قواعد مهمة
+                        </h3>
+                        <ol class="text-xs text-slate-600 space-y-1.5 list-decimal list-inside font-medium">
+                            <li>كل عميل له كود خاص يذكره عند التواصل.</li>
+                            <li>إرسال سكرين شوت يومي بالتوزيع الساعة 9 مساءً.</li>
+                            <li>ممنوع السبام، والغياب بدون إذن يتسبب في الخصم.</li>
+                            <li>صرف البونص يوم 5 في الشهر مع المرتب.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm space-y-2">
+                        <h3 class="font-black text-sm text-itiDark flex items-center gap-2">
+                            <i class="fa-solid fa-message text-itiGold"></i> نص الترحيب للموظف الجديد
+                        </h3>
+                        <div class="bg-slate-50 p-3 rounded-xl border text-xs text-slate-700 leading-relaxed font-mono">
+                            "نظام شغلك معانا:<br>
+                            - شغلك توزيع إعلانات جاهزة بنديهالك.<br>
+                            - مرتبك 3000 ثابت لو جبت 10 عملاء في الشهر.<br>
+                            - ولو جبت أكتر بتاخد بونص لحد 2000 جنيه.<br>
+                            يعني ممكن تقبض 5000 + عمولة."
+                        </div>
+                        <button onclick="copyWelcomeMsg()" class="w-full bg-itiGold hover:bg-amber-600 text-itiDark font-bold py-2 rounded-xl text-xs transition">نسخ النص</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-itiDark text-slate-400 text-[10px] sm:text-xs py-3 text-center border-t border-slate-800 mt-8">
+        <p>مكتب ITI Online للخدمات © 2026 - م/ عبدالله التركي (ملوي)</p>
+    </footer>
+
+    <script>
+        const GOOGLE_SHEET_API_URL = "https://script.google.com/macros/s/AKfycbys99wNPsfbmOZWLy_GNtMUWljfcc0WYELz6JxH6OJwKdESbBfOZ1UwxuvjlzSfZg/exec";
+
+        function switchTab(tabId) {
+            ['servicesTab', 'employeeTab', 'rulesTab'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+            document.getElementById('btnServ').className = "bg-slate-800 text-slate-200 px-3 py-1.5 rounded-xl transition whitespace-nowrap";
+            document.getElementById('btnEmp').className = "bg-slate-800 text-slate-200 px-3 py-1.5 rounded-xl transition whitespace-nowrap";
+            document.getElementById('btnRules').className = "bg-slate-800 text-slate-200 px-3 py-1.5 rounded-xl transition whitespace-nowrap";
+
+            document.getElementById(tabId).classList.remove('hidden');
+            if(tabId === 'servicesTab') document.getElementById('btnServ').className = "bg-itiGold text-itiDark px-3 py-1.5 rounded-xl transition font-bold shadow whitespace-nowrap";
+            if(tabId === 'employeeTab') document.getElementById('btnEmp').className = "bg-itiGold text-itiDark px-3 py-1.5 rounded-xl transition font-bold shadow whitespace-nowrap";
+            if(tabId === 'rulesTab') document.getElementById('btnRules').className = "bg-itiGold text-itiDark px-3 py-1.5 rounded-xl transition font-bold shadow whitespace-nowrap";
+        }
+
+        function toggleAttendance() {
+            let attended = document.getElementById('attendedWork').value;
+            let workFields = document.getElementById('workFields');
+            if(attended === 'لا') {
+                workFields.style.opacity = '0.4';
+                workFields.style.pointerEvents = 'none';
+            } else {
+                workFields.style.opacity = '1';
+                workFields.style.pointerEvents = 'auto';
+            }
+            calculateSalary();
+        }
+
+        function calculateSalary() {
+            let attended = document.getElementById('attendedWork').value;
+            let clients = parseInt(document.getElementById('newClients').value) || 0;
+            let msgs = parseInt(document.getElementById('whatsappMsgs').value) || 0;
+            let sales = parseFloat(document.getElementById('totalSales').value) || 0;
+
+            let base = 3000;
+            let deduction = 0;
+            let bonus = 0;
+
+            if (attended === 'لا') {
+                deduction = 100;
+                base = 0;
+            } else {
+                if (clients < 10) base = 2000;
+                if (msgs >= 150 && clients >= 50 && sales > 15000) bonus = 2000;
+                else if (msgs >= 100 && clients >= 30 && sales > 10000) bonus = 1000;
+                else if (msgs >= 80 && clients >= 20 && sales > 6000) bonus = 500;
+            }
+
+            let final = base + bonus - deduction;
+            if (final < 0) final = 0;
+
+            document.getElementById('calcBase').innerText = (attended === 'لا' ? 0 : base) + " ج.م";
+            document.getElementById('calcDeduction').innerText = deduction + " ج.م";
+            document.getElementById('calcBonus').innerText = bonus + " ج.م";
+            document.getElementById('calcFinal').innerText = final + " ج.م";
+
+            return { base: (attended === 'لا' ? 0 : base), deduction, bonus, final };
+        }
+
+        function submitEmployeeReport(e) {
+            e.preventDefault();
+            let btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = "جاري الإرسال...";
+
+            let attended = document.getElementById('attendedWork').value;
+            let calc = calculateSalary();
+
+            let params = new URLSearchParams();
+            params.append('employeeName', 'رضوى مصطفى');
+            params.append('attendedWork', attended);
+            params.append('whatsappMsgs', attended === 'لا' ? 0 : document.getElementById('whatsappMsgs').value);
+            params.append('groupsCount', attended === 'لا' ? 0 : document.getElementById('groupsCount').value);
+            params.append('newClients', attended === 'لا' ? 0 : document.getElementById('newClients').value);
+            params.append('totalSales', attended === 'لا' ? 0 : document.getElementById('totalSales').value);
+            params.append('deductionAmount', calc.deduction);
+            params.append('baseSalary', calc.base);
+            params.append('bonusAmount', calc.bonus);
+            params.append('finalSalary', calc.final);
+            params.append('notes', document.getElementById('dailyNotes').value || (attended === 'لا' ? "غياب وتطبيق
